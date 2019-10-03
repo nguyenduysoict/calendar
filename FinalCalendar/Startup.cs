@@ -31,6 +31,12 @@ namespace FinalCalendar
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //DefaultFilesOptions options = new DefaultFilesOptions();
+            //options.DefaultFileNames.Clear();
+            //options.DefaultFileNames.Add("index.html");
+            //app.UseDefaultFiles(options);
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -46,6 +52,7 @@ namespace FinalCalendar
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

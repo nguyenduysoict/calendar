@@ -21,7 +21,7 @@ namespace FinalCalendar.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            insertCalendar();
+           // insertCalendar();
             return new string[] { "value1", "value2" };
         }
 
